@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Mamoc_GridActions>
+			<version>1.0.0</version>
+		</Mamoc_GridActions>
+	</modules>
+
+	<global>
+
+		<blocks>
+			<mmc_gridactions>
+				<class>Mamoc_GridActions_Block</class>
+			</mmc_gridactions>
+		</blocks>
+
+		<helpers>
+			<mmc_gridactions>
+				<class>Mamoc_GridActions_Helper</class>
+			</mmc_gridactions>
+		</helpers>
+
+		<models>
+			<mmc_gridactions>
+				<class>Mamoc_GridActions_Model</class>
+			</mmc_gridactions>
+		</models>
+
+	</global>
+	
+	<frontend>
+		<layout>
+			<updates>
+				<mmc_gridactions>
+					<file>mamoc/[modulecode].xml</file>
+				</mmc_gridactions>
+			</updates>
+		</layout>
+	</frontend>
+
+	<admin>
+		<translate>
+			<modules>
+				<mmc_gridactions>
+					<files>
+                        			<default>Mamoc_GridActions.csv</default>
+                    			</files>
+				</mmc_gridactions>
+			</modules>
+		</translate>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<mmc_gridactions after="Mage_Adminhtml">Mamoc_GridActions</mmc_gridactions>
+					</modules>
+	              		</args>
+         		</adminhtml>
+        	</routers>
+	</admin>
+
+</config>
